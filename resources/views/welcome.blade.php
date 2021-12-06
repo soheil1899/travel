@@ -101,6 +101,7 @@
         .left-list-item:hover{border-radius: 3px; background-color: #ebf6ff}
         .left-list-item2:hover{border-radius: 3px;background-color: #f8902f;color: #fff;}
         .index-img{height: 150px;background-position: center;background-size: cover;}
+        .pointer{cursor: pointer}
     </style>
 </head>
 
@@ -539,6 +540,90 @@
                             <li><a class="left-list-item2 bg-blue01 text-center w-100 px-2 py-2 d-block rounded mb-2" href="">
                                     بلیط چارتر</a></li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="index-video text-white my-5 py-4 px-5" style="background-color: #424242">
+        <div class="row mx-0">
+            <div class="col-6 text-right">
+                <h5>آخرین ویدیوها</h5>
+            </div>
+            <div class="col-6">
+                <a href="#" class="text-primary">نمایش بیشتر
+                <i class="fas fa-chevron-circle-left"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row mx-0 text-right mt-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="index-img pointer position-relative" style="background-image: url(/images/s1.jpg)">
+                    <i class="fas fa-play-circle position-absolute text-center" style="font-size:50px;left: 0; right: 0; top: 35%"></i>
+                </div>
+                <h6 class="mt-3">مقبره تاریخی شیخ جواد آملی</h6>
+                <label class="font11" style="color:#ccc">چهارشنبه 9 تیر 1399</label>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="index-img pointer position-relative" style="background-image: url(/images/s2.jpg)">
+                    <i class="fas fa-play-circle position-absolute text-center" style="font-size:50px;left: 0; right: 0; top: 35%"></i>
+                </div>
+                <h6 class="mt-3">مقبره تاریخی شیخ جواد آملی</h6>
+                <label class="font11" style="color:#ccc">چهارشنبه 9 تیر 1399</label>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="index-img pointer position-relative" style="background-image: url(/images/s3.jpg)">
+                    <i class="fas fa-play-circle position-absolute text-center" style="font-size:50px;left: 0; right: 0; top: 35%"></i>
+                </div>
+                <h6 class="mt-3">مقبره تاریخی شیخ جواد آملی</h6>
+                <label class="font11" style="color:#ccc">چهارشنبه 9 تیر 1399</label>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="index-img pointer position-relative" style="background-image: url(/images/s4.jpg)">
+                    <i class="fas fa-play-circle position-absolute text-center" style="font-size:50px;left: 0; right: 0; top: 35%"></i>
+                </div>
+                <h6 class="mt-3">مقبره تاریخی شیخ جواد آملی</h6>
+                <label class="font11" style="color:#ccc">چهارشنبه 9 تیر 1399</label>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="resturan my-5 py-4 px-5 mx-5">
+        <div>
+            <h5 style="border-bottom: 3px solid #56a0d9" class="widthfit pb-2 mx-auto px-3">پیشنهادهای هفته همگردی</h5>
+        </div>
+        <div class="row mx-5 mt-4 px-5">
+            <div class="col-4">
+                <div class="index-img pointer position-relative" style="background-image: url(/images/s1.jpg)">
+                    <div class="position-absolute bg-white mx-auto p-3 font12 text-center" style="border-radius: 10px;box-shadow: 0 0 10px 0 #bfbfbf;left: 0; right: 0; top: 120px; width: 90%">
+                        یک همبرگر خوشمزه را در این رستوران تست کنید
+                        <div class="position-absolute widthfit px-3 py-1 mx-auto" style="background-color: #a8d6ff;top: -15px; left: 0; right: 0; border-radius: 5px">
+                            رستوران مانزو
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="index-img pointer position-relative" style="background-image: url(/images/s2.jpg)">
+                    <div class="position-absolute bg-white mx-auto p-3 font12 text-center" style="border-radius: 10px;box-shadow: 0 0 10px 0 #bfbfbf;left: 0; right: 0; top: 120px; width: 90%">
+                        رستوران اصیل ایرانی در تهران
+                        <div class="position-absolute widthfit px-3 py-1 mx-auto" style="background-color: #a8d6ff;top: -15px; left: 0; right: 0; border-radius: 5px">
+                            رستوران مانزو
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="index-img pointer position-relative" style="background-image: url(/images/s3.jpg)">
+                    <div class="position-absolute bg-white mx-auto p-3 font12 text-center" style="border-radius: 10px;box-shadow: 0 0 10px 0 #bfbfbf;left: 0; right: 0; top: 120px; width: 90%">
+                        یک همبرگر خوشمزه را در این رستوران تست کنید
+                        <div class="position-absolute widthfit px-3 py-1 mx-auto" style="background-color: #a8d6ff;top: -15px; left: 0; right: 0; border-radius: 5px">
+                            رستوران مانزو
+                        </div>
                     </div>
                 </div>
             </div>
