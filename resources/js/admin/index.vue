@@ -8,13 +8,13 @@
                 <a class="nav-link px-lg-4" id="user-tab" data-toggle="tab" href="#user">مدیریت کاربران</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-lg-4 active" id="category-tab" data-toggle="tab" href="#category" role="tab">مدیریت دسته بندی ها</a>
+                <a class="nav-link px-lg-4" id="category-tab" data-toggle="tab" href="#category" role="tab">مدیریت دسته بندی ها</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-lg-4" id="place-tab" data-toggle="tab" href="#place" role="tab">مدیریت مکان ها</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-lg-4" id="video-tab" data-toggle="tab" href="#video" role="tab">مدیریت ویدیوها</a>
+                <a class="nav-link px-lg-4 active" id="video-tab" data-toggle="tab" href="#video" role="tab">مدیریت ویدیوها</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-lg-4" id="comment-tab" data-toggle="tab" href="#comment" role="tab">مدیریت کامنت ها</a>
@@ -28,11 +28,15 @@
             <div class="tab-pane fade" id="user">
                 <user-index></user-index>
             </div>
-            <div class="tab-pane fade show active" id="category">
-                <category-index></category-index>
+            <div class="tab-pane fade" id="category">
+                <category-index :categoryList="categoryList"></category-index>
             </div>
-            <div class="tab-pane fade" id="place">...</div>
-            <div class="tab-pane fade" id="video">...</div>
+            <div class="tab-pane fade" id="place">
+                <place-index :categoryList="categoryList"></place-index>
+            </div>
+            <div class="tab-pane fade show active" id="video">
+                <movie-index></movie-index>
+            </div>
             <div class="tab-pane fade" id="comment">...</div>
             <div class="tab-pane fade" id="setting">...</div>
         </div>
@@ -42,9 +46,21 @@
 <script>
     import userIndex from "./userIndex";
     import categoryIndex from "./categoryIndex";
+    import placeIndex from "./placeIndex";
+    import movieIndex from "./movieIndex";
     export default {
         name: "index",
-        components:{userIndex, categoryIndex},
+        components:{userIndex, categoryIndex, placeIndex, movieIndex},
+        data(){
+            return{
+                categoryList:[],
+            }
+        },
+        mounted() {
+            axios.get('/admin/category-list').then(res => {
+                this.categoryList = res.data;
+            });
+        }
     }
 </script>
 

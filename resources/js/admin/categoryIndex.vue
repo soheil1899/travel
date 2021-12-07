@@ -53,7 +53,7 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-12 mb-3">
-                                <label class="mb-0">عنوان دسته بندی</label>
+                                <label class="mb-0">عنوان دسته بندی <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" v-model="category.title">
                             </div>
                             <div class="col-md-12 mb-3 pt-4 text-left">
@@ -73,7 +73,7 @@
             <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="mb-0 mt-2">توضیحات مربوط به دسته {{contentTitle}}</h4>
+                        <h4 class="mb-0 mt-2">توضیحات مربوط به دسته {{category.title}}</h4>
                         <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -134,11 +134,13 @@
                     title: '',
                     content: '',
                 },
-                contentTitle: '',
             }
         },
-        mounted() {
-            this.getCategoryList();
+        props:['categoryList'],
+        watch: {
+            categoryList: function () {
+                this.list = this.categoryList;
+            },
         },
         components: {
             'editor': Editor
@@ -161,7 +163,9 @@
                     this.category.content= category.content;
                 else
                     this.category.content = '';
-                this.contentTitle = category.title;
+
+                this.category.id= category.id;
+                this.category.title= category.title;
                 $('#categoryDescriptionModal').modal('show')
             },
             getCategoryList() {

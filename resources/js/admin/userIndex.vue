@@ -67,16 +67,16 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label class="mb-0">نام کاربری</label>
+                                <label class="mb-0">نام کاربری <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" v-model="user.name">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label class="mb-0">نام کامل کاربر</label>
-                                <input type="text" class="form-control" v-model="user.fullname">
+                                <label class="mb-0">آدرس ایمیل <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" v-model="user.email">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label class="mb-0">آدرس ایمیل</label>
-                                <input type="email" class="form-control" v-model="user.email">
+                                <label class="mb-0">نام و نام خانوادگی</label>
+                                <input type="text" class="form-control" v-model="user.fullname">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="mb-0">شماره موبایل</label>

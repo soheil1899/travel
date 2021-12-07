@@ -33,4 +33,17 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['au
     Route::get('/category-list', 'CategoryController@categoryList');
     Route::post('/save-category', 'CategoryController@saveCategory');
     Route::delete('/delete-category/{id}', 'CategoryController@deleteCategory');
+
+    Route::get('/movie-list', 'MovieController@movieList');
+    Route::post('/save-movie', 'MovieController@saveMovie');
+    Route::delete('/delete-movie/{id}', 'MovieController@deleteMovie');
+    Route::post('/save-movie-image', 'MovieController@saveMovieImage');
+
+    Route::get('/place-list', 'PlaceController@placeList');
+    Route::post('/save-place', 'PlaceController@savePlace');
+    Route::delete('/delete-place/{id}', 'PlaceController@deletePlace');
+    Route::get('/place-gallery/{id}', 'PlaceController@placeGallery');
+    Route::post('/save-place-gallery', 'PlaceController@savePlaceGallery');
+
+    Route::post('/delete-gallery', 'PlaceController@deleteGallery');
 });
