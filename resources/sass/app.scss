@@ -11,3 +11,40 @@
 
 
 html , body , h1 , h2 , h3 , h4 , h5 , h6 , p{font-family: 'IRANSans';}
+
+
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .container{max-width: 1180px!important;}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1500px) {
+    .container{max-width: 1480px!important;}
+}
+
+.page-item:last-child .page-link{
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+.page-item:first-child .page-link{
+    margin-left: 2px!important;
+    border-radius: 0 0.25rem 0.25rem 0 !important;
+}
+
+.pointer{cursor: pointer}
+.btn{
+    &{transition: opacity .5s}
+    &:hover{opacity: .8;}
+    &.btn-red{background-color: #eb3b5a;color: white}
+    &.btn-orange{background-color: #fa8231;color: white}
+    &.btn-yellow{background-color: #f7b731;color: white}
+    &.btn-green{background-color: #20bf6b;color: white}
+    &.btn-cyan{background-color: #0fb9b1;color: white}
+    &.btn-blue{background-color: #2d98da;color: white}
+    &.btn-dark-blue{background-color: #3867d6;color: white}
+    &.btn-purple{background-color: #8854d0;color: white}
+    &.btn-silver{background-color: #a5b1c2;color: black}
+    &.btn-grey{background-color: #4b6584;color: white}
+}

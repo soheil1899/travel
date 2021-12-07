@@ -109,13 +109,13 @@
 <body>
 
 
-<div>
+<div class="container">
     <div class="row mx-0 my-3 px-5">
         <div class="col-6 pr-0 text-right">
             <img src="/images/logo.png" alt="">
         </div>
         <div class="col-6 pl-0">
-            <button class="btn btn-primary blue-shadow px-4">عضویت/ورود</button>
+            <a href="/login" class="btn btn-primary text-white blue-shadow px-4">عضویت/ورود</a>
             <button class="btn btn-secondary2 px-4">
                 <i class="fas fa-search"></i>
                 جستجو
@@ -132,7 +132,7 @@
     </div>
 
 
-    <div class="my-4 px-5">
+    <div class="my-4 px-4">
         <div class="row mx-0 text-right">
             <div class="col-9 pr-0">
                 <div class="row mx-0">
@@ -592,7 +592,7 @@
     </div>
 
 
-    <div class="resturan my-5 py-4 px-5 mx-5">
+    <div class="resturan my-5 py-4  mx-5">
         <div>
             <h5 style="border-bottom: 3px solid #56a0d9" class="widthfit pb-2 mx-auto px-3">پیشنهادهای هفته همگردی</h5>
         </div>
