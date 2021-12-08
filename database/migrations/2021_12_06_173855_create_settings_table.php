@@ -19,7 +19,7 @@ class CreateSettingsTable extends Migration
             $table->string('description')->nullable();
             $table->string('keywords')->nullable();
             $table->string('site_name')->nullable();
-            $table->string('site_logo')->nullable();
+            $table->boolean('site_logo')->default(0);
             $table->string('tell')->nullable();
             $table->string('mobile')->nullable();
             $table->string('address')->nullable();

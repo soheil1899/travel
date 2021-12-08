@@ -24,6 +24,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['auth', 'CheckAdmin'])->group(function () {
     Route::get('/', 'AdminController@index')->name('master');
+    Route::get('/get-setting', 'AdminController@getSetting');
+    Route::post('/change-setting', 'AdminController@changeSetting');
 
 
     Route::get('/user-list', 'UserController@userList');
@@ -33,6 +35,11 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['au
     Route::get('/category-list', 'CategoryController@categoryList');
     Route::post('/save-category', 'CategoryController@saveCategory');
     Route::delete('/delete-category/{id}', 'CategoryController@deleteCategory');
+
+    Route::get('/comment-list', 'CommentController@commentList');
+    Route::get('/change-comment-publish/{id}/{publish}', 'CommentController@changeCommentPublish');
+    Route::post('/change-comment-content', 'CommentController@changeCommentContent');
+    Route::delete('/delete-comment/{id}', 'CommentController@deleteComment');
 
     Route::get('/movie-list', 'MovieController@movieList');
     Route::post('/save-movie', 'MovieController@saveMovie');
@@ -46,4 +53,5 @@ Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['au
     Route::post('/save-place-gallery', 'PlaceController@savePlaceGallery');
 
     Route::post('/delete-gallery', 'PlaceController@deleteGallery');
+
 });

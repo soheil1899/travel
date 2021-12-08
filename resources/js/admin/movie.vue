@@ -19,7 +19,8 @@
                 <div class="mt-3">
                     <h6>{{m.title}}</h6>
                     <div>
-                        <button class="btn btn-sm btn-purple" v-if="m.image" @click="showImage(m)">مشاهده تصویر</button>
+                        <button class="btn btn-sm btn-purple" @click="editDescriptionMovie(m)">توضیحات</button>
+                        <button class="btn btn-sm btn-orange" v-if="m.image" @click="showImage(m)">مشاهده تصویر</button>
                         <button class="btn btn-sm btn-cyan" v-if="m.image" @click="imageMovie(m.id)">ویرایش تصویر</button>
                         <button class="btn btn-sm btn-cyan" v-else @click="imageMovie(m.id)">افزودن تصویر</button>
                         <button class="btn btn-sm btn-primary" @click="editMovie(m)">ویرایش</button>
@@ -103,14 +104,61 @@
 
 
 
+        <!-- Add Edit Modal -->
+        <div class="modal fade" id="movieDescriptionModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="mb-0 mt-2">توضیحات مربوط به ویدیو {{movie.title}}</h4>
+                        <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <editor v-model="movie.content"
+                                        api-key="3wu93q3r5cqr4wjv1f2bfqnb9ipogb37lvl7chpsuyubd4kk"
+                                        :init="{
+         height: 500,
+         menubar: false,
+         plugins: [
+           'advlist autolink lists link image charmap print preview anchor',
+           'searchreplace visualblocks code fullscreen',
+           'insertdatetime media table paste code help wordcount directionality'
+         ],
+         toolbar:
+           'undo redo | formatselect | bold italic backcolor | \
+           alignleft aligncenter alignright alignjustify | \
+           bullist numlist outdent indent | help | ltr rtl | link | preview | \
+           table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow | \
+            tableinsertcolbefore tableinsertcolafter tabledeletecol'
+       }"
+                                />
+
+                            </div>
+                            <div class="col-md-12 mb-3 pt-4 text-left">
+                                <button class="btn  btn-block btn-primary px-5" @click="saveMovie">ذخیره توضیحات ویدیو</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
 </template>
 
 <script>
+    import Editor from '@tinymce/tinymce-vue'
+
     import Swal from 'sweetalert2'
 
     export default {
-        name: "movieIndex",
+        name: "movie",
         data(){
             return{
                 list: [],
@@ -135,10 +183,25 @@
                 this.getMovieList();
             },
         },
+        components: {
+            'editor': Editor
+        },
         mounted() {
             this.getMovieList();
         },
         methods:{
+            editDescriptionMovie(movie){
+                if (movie.content)
+                    this.movie.content= movie.content;
+                else
+                    this.movie.content = '';
+
+                this.movie.id= movie.id;
+                this.movie.title= movie.title;
+                this.movie.aparat_link= movie.aparat_link;
+                this.movie.tags= movie.tags;
+                $('#movieDescriptionModal').modal('show')
+            },
             imageMovie(id) {
                 this.movie_id = id;
                 document.getElementById("browseMovie").click();
@@ -161,6 +224,7 @@
                 this.movie.title= '';
                 this.movie.aparat_link= '';
                 this.movie.tags= '';
+                this.movie.content= '';
                 this.modalTitle= 'افزودن ویدیو جدید';
                 $('#movieModal').modal('show')
             },
@@ -169,6 +233,10 @@
                 this.movie.title= movie.title;
                 this.movie.aparat_link= movie.aparat_link;
                 this.movie.tags= movie.tags;
+                if (movie.content)
+                    this.movie.content= movie.content;
+                else
+                    this.movie.content = '';
                 this.modalTitle= 'ویرایش ویدیو';
                 $('#movieModal').modal('show')
             },

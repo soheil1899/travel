@@ -2,8 +2,6 @@
 
 @section('content')
 <div class="container">
-    <div id="app">
-        <admin-index></admin-index>
-    </div>
+    <admin-index></admin-index>
 </div>
 @endsection

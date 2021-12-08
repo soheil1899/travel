@@ -124,7 +124,7 @@
     import Swal from 'sweetalert2'
 
     export default {
-        name: "categoryIndex",
+        name: "category",
         data(){
             return{
                 list: [],
@@ -149,12 +149,18 @@
             addCategory(){
                 this.category.id= null;
                 this.category.title= '';
+                this.category.content = '';
+
                 this.modalTitle= 'افزودن دسته بندی جدید';
                 $('#categoryModal').modal('show')
             },
             editCategory(category){
                 this.category.id= category.id;
                 this.category.title= category.title;
+                if (category.content)
+                    this.category.content= category.content;
+                else
+                    this.category.content = '';
                 this.modalTitle= 'ویرایش دسته بندی';
                 $('#categoryModal').modal('show')
             },

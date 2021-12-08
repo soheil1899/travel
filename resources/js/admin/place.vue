@@ -214,7 +214,7 @@
     import Swal from 'sweetalert2'
 
     export default {
-        name: "PlaceIndex",
+        name: "place",
         data(){
             return{
                 list: [],
@@ -288,6 +288,7 @@
                 this.place.address= '';
                 this.place.lat= '';
                 this.place.lng= '';
+                this.place.content = '';
                 this.modalTitle= 'افزودن مکان جدید';
                 $('#placeModal').modal('show')
             },
@@ -301,6 +302,10 @@
                 this.place.address= place.address;
                 this.place.lat= place.lat;
                 this.place.lng= place.lng;
+                if (place.content)
+                    this.place.content= place.content;
+                else
+                    this.place.content = '';
                 this.modalTitle= 'ویرایش مکان';
                 $('#placeModal').modal('show')
             },

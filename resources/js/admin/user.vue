@@ -109,7 +109,7 @@
     import Swal from 'sweetalert2'
 
     export default {
-        name: "userIndex",
+        name: "user",
         data(){
             return{
                 list: [],
