@@ -141,7 +141,7 @@
                             <a href="">
                             <div class="index-img" style="background-image: url(/images/s1.jpg)"></div>
                             <div class="row border-bottom mx-0 py-2">
-                                <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                     <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                 </div>
                                 <div class="col-10 pt-2">
@@ -167,7 +167,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s2.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
@@ -193,7 +193,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s3.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
@@ -220,7 +220,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s4.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
@@ -246,7 +246,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s5.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
@@ -272,7 +272,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s6.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
@@ -299,7 +299,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s1.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
@@ -325,7 +325,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s2.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
@@ -351,7 +351,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s3.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
@@ -378,7 +378,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s4.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
@@ -404,7 +404,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s5.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
@@ -430,7 +430,7 @@
                             <a href="">
                                 <div class="index-img" style="background-image: url(/images/s6.jpg)"></div>
                                 <div class="row border-bottom mx-0 py-2">
-                                    <div class="col-2" style="padding: 10px 12px;border-radius: 30px;background-color: #30a1ff;">
+                                    <div class="col-2" style="padding: 8px;border-radius: 30px;background-color: #30a1ff;">
                                         <i class="fas fa-tree text-white" style="font-size: 30px"></i>
                                     </div>
                                     <div class="col-10 pt-2">
