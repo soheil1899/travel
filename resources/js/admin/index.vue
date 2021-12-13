@@ -2,7 +2,7 @@
     <div style="direction: rtl">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link px-lg-4" id="home-tab" data-toggle="tab" href="#home">داشبورد</a>
+                <a class="nav-link px-lg-4 active" id="home-tab" data-toggle="tab" href="#home">داشبورد</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-lg-4" id="user-tab" data-toggle="tab" href="#user">مدیریت کاربران</a>
@@ -20,11 +20,11 @@
                 <a class="nav-link px-lg-4" id="comment-tab" data-toggle="tab" href="#comment" role="tab">مدیریت کامنت ها</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-lg-4 active" id="setting-tab" data-toggle="tab" href="#setting" role="tab">تنظیمات سایت</a>
+                <a class="nav-link px-lg-4" id="setting-tab" data-toggle="tab" href="#setting" role="tab">تنظیمات سایت</a>
             </li>
         </ul>
         <div class="tab-content text-right px-4 py-5" id="myTabContent">
-            <div class="tab-pane fade" id="home">...</div>
+            <div class="tab-pane fade show active" id="home">...</div>
             <div class="tab-pane fade" id="user">
                 <user-tab></user-tab>
             </div>
@@ -40,7 +40,7 @@
             <div class="tab-pane fade" id="comment">
                 <comment-tab></comment-tab>
             </div>
-            <div class="tab-pane fade show active" id="setting">
+            <div class="tab-pane fade" id="setting">
                 <setting-tab></setting-tab>
             </div>
         </div>

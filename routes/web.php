@@ -13,14 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/page2', function () {
-    return view('page2');
-});
-Route::get('/page3', function () {
-    return view('page3');
+Route::namespace('App\Http\Controllers\Client')->group(function () {
+    Route::get('/', 'IndexController@index');
+
+    Route::get('/category/{id}/{title}', 'IndexController@category');
+
+    Route::get('/place/{id}/{title}', 'IndexController@place');
+
 });
 
 Auth::routes();

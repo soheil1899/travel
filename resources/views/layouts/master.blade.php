@@ -13,10 +13,13 @@
 <body>
 
 
+<div id="app">
 <div class="container">
     <div class="row mx-0 my-3 px-5">
         <div class="col-6 pr-0 text-right">
+            <a href="/">
             <img src="/images/logo.png" alt="">
+            </a>
         </div>
         <div class="col-6 pl-0">
             <a href="/login" class="btn btn-primary text-white blue-shadow px-4">عضویت/ورود</a>
@@ -28,10 +31,9 @@
     </div>
     <div class="menu px-5">
         <ul class="text-right px-0 py-3">
-            <li><a href="#">گردشگری مازندران</a></li>
-            <li><a href="#">گردشگری ایران</a></li>
-            <li><a href="#">جزایر ایران</a></li>
-            <li><a href="#">غذاهای محلی</a></li>
+            @foreach($menu as $m)
+            <li><a href="/category/{{$m['id']}}/{{$m['title']}}">{{$m['title']}}</a></li>
+            @endforeach
         </ul>
     </div>
 
@@ -148,6 +150,7 @@
         </div>
     </div>
 
+    @yield('additional')
 
     <div class="row mx-0 py-4 px-5" style="background-color: #f8902f">
         <div class="col-3 text-white pr-0 text-right">
@@ -224,7 +227,7 @@
 
 
 </div>
-
+</div>
 
 </body>
 

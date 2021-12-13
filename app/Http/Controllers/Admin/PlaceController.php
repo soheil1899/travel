@@ -25,6 +25,7 @@ class PlaceController extends Controller
         $place->type = $request->place['type'];
         $place->tags = $request->place['tags'];
         $place->content = $request->place['content'];
+        $place->description = $request->place['description'];
         $place->address = $request->place['address'];
         $place->location = $request->place['location'];
         $place->save();

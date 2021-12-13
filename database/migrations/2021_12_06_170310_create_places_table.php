@@ -21,13 +21,13 @@ class CreatePlacesTable extends Migration
             $table->string('type');
             $table->string('image')->nullable();
             $table->text('tags')->nullable();
+            $table->text('description')->nullable();
             $table->longText('content')->nullable();
             $table->string('address')->nullable();
             $table->text('location')->nullable();
 
             $table->bigInteger('seen')->default(0);
             $table->bigInteger('like')->default(0);
-            $table->bigInteger('comments')->default(0);
             $table->timestamps();
         });
     }

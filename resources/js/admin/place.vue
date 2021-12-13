@@ -105,8 +105,12 @@
                                 <input type="text" class="form-control" v-model="place.tags">
                             </div>
                             <div class="col-md-12 mb-3">
+                                <label class="mb-0">معرفی مختصر</label>
+                                <textarea class="form-control" rows="5" v-model="place.description"></textarea>
+                            </div>
+                            <div class="col-md-12 mb-3">
                                 <label class="mb-0">کد موقعیت گوگل</label>
-                                <textarea class="form-control" rows="5" v-model="place.location"></textarea>
+                                <textarea style="direction: ltr; font-family: Arial" class="form-control" rows="5" v-model="place.location"></textarea>
                             </div>
 
 
@@ -229,6 +233,7 @@
                     tags: '',
                     address: '',
                     location: '',
+                    description: '',
                     content: '',
                 },
                 contentTitle: '',
@@ -282,6 +287,7 @@
                 this.place.tags= '';
                 this.place.address= '';
                 this.place.location= '';
+                this.place.description = '';
                 this.place.content = '';
                 this.modalTitle= 'افزودن مکان جدید';
                 $('#placeModal').modal('show')
@@ -295,6 +301,7 @@
                 this.place.tags= place.tags;
                 this.place.address= place.address;
                 this.place.location= place.location;
+                this.place.description= place.description;
                 if (place.content)
                     this.place.content= place.content;
                 else
@@ -315,6 +322,7 @@
                 this.place.type= place.type;
                 this.place.tags= place.tags;
                 this.place.address= place.address;
+                this.place.description= place.description;
                 this.place.location= place.location;
                 $('#placeDescriptionModal').modal('show')
             },

@@ -3620,6 +3620,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -3642,6 +3646,7 @@ __webpack_require__.r(__webpack_exports__);
         tags: '',
         address: '',
         location: '',
+        description: '',
         content: ''
       },
       contentTitle: ''
@@ -3703,6 +3708,7 @@ __webpack_require__.r(__webpack_exports__);
       this.place.tags = '';
       this.place.address = '';
       this.place.location = '';
+      this.place.description = '';
       this.place.content = '';
       this.modalTitle = 'افزودن مکان جدید';
       $('#placeModal').modal('show');
@@ -3716,6 +3722,7 @@ __webpack_require__.r(__webpack_exports__);
       this.place.tags = place.tags;
       this.place.address = place.address;
       this.place.location = place.location;
+      this.place.description = place.description;
       if (place.content) this.place.content = place.content;else this.place.content = '';
       this.modalTitle = 'ویرایش مکان';
       $('#placeModal').modal('show');
@@ -3729,6 +3736,7 @@ __webpack_require__.r(__webpack_exports__);
       this.place.type = place.type;
       this.place.tags = place.tags;
       this.place.address = place.address;
+      this.place.description = place.description;
       this.place.location = place.location;
       $('#placeDescriptionModal').modal('show');
     },
@@ -66755,9 +66763,11 @@ var render = function () {
         attrs: { id: "myTabContent" },
       },
       [
-        _c("div", { staticClass: "tab-pane fade", attrs: { id: "home" } }, [
-          _vm._v("..."),
-        ]),
+        _c(
+          "div",
+          { staticClass: "tab-pane fade show active", attrs: { id: "home" } },
+          [_vm._v("...")]
+        ),
         _vm._v(" "),
         _c(
           "div",
@@ -66796,10 +66806,7 @@ var render = function () {
         _vm._v(" "),
         _c(
           "div",
-          {
-            staticClass: "tab-pane fade show active",
-            attrs: { id: "setting" },
-          },
+          { staticClass: "tab-pane fade", attrs: { id: "setting" } },
           [_c("setting-tab")],
           1
         ),
@@ -66820,7 +66827,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "nav-link px-lg-4",
+              staticClass: "nav-link px-lg-4 active",
               attrs: { id: "home-tab", "data-toggle": "tab", href: "#home" },
             },
             [_vm._v("داشبورد")]
@@ -66906,7 +66913,7 @@ var staticRenderFns = [
           _c(
             "a",
             {
-              staticClass: "nav-link px-lg-4 active",
+              staticClass: "nav-link px-lg-4",
               attrs: {
                 id: "setting-tab",
                 "data-toggle": "tab",
@@ -67967,6 +67974,38 @@ var render = function () {
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-12 mb-3" }, [
                     _c("label", { staticClass: "mb-0" }, [
+                      _vm._v("معرفی مختصر"),
+                    ]),
+                    _vm._v(" "),
+                    _c("textarea", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.place.description,
+                          expression: "place.description",
+                        },
+                      ],
+                      staticClass: "form-control",
+                      attrs: { rows: "5" },
+                      domProps: { value: _vm.place.description },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.place,
+                            "description",
+                            $event.target.value
+                          )
+                        },
+                      },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-12 mb-3" }, [
+                    _c("label", { staticClass: "mb-0" }, [
                       _vm._v("کد موقعیت گوگل"),
                     ]),
                     _vm._v(" "),
@@ -67980,6 +68019,7 @@ var render = function () {
                         },
                       ],
                       staticClass: "form-control",
+                      staticStyle: { direction: "ltr", "font-family": "Arial" },
                       attrs: { rows: "5" },
                       domProps: { value: _vm.place.location },
                       on: {
