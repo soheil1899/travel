@@ -23,8 +23,7 @@ class CreatePlacesTable extends Migration
             $table->text('tags')->nullable();
             $table->longText('content')->nullable();
             $table->string('address')->nullable();
-            $table->string('lat')->nullable();
-            $table->string('lng')->nullable();
+            $table->text('location')->nullable();
 
             $table->bigInteger('seen')->default(0);
             $table->bigInteger('like')->default(0);

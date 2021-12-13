@@ -104,13 +104,9 @@
                                 <label class="mb-0">تگ ها (جداسازی با /)</label>
                                 <input type="text" class="form-control" v-model="place.tags">
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="mb-0">طول جغرافیایی</label>
-                                <input type="text" class="form-control" v-model="place.lat">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="mb-0">عرض جغرافیایی</label>
-                                <input type="text" class="form-control" v-model="place.lng">
+                            <div class="col-md-12 mb-3">
+                                <label class="mb-0">کد موقعیت گوگل</label>
+                                <textarea class="form-control" rows="5" v-model="place.location"></textarea>
                             </div>
 
 
@@ -232,8 +228,7 @@
                     type: 'جاذبه طبیعت',
                     tags: '',
                     address: '',
-                    lat: '',
-                    lng: '',
+                    location: '',
                     content: '',
                 },
                 contentTitle: '',
@@ -286,8 +281,7 @@
                 this.place.type= 'جاذبه طبیعت';
                 this.place.tags= '';
                 this.place.address= '';
-                this.place.lat= '';
-                this.place.lng= '';
+                this.place.location= '';
                 this.place.content = '';
                 this.modalTitle= 'افزودن مکان جدید';
                 $('#placeModal').modal('show')
@@ -300,8 +294,7 @@
                 this.place.type= place.type;
                 this.place.tags= place.tags;
                 this.place.address= place.address;
-                this.place.lat= place.lat;
-                this.place.lng= place.lng;
+                this.place.location= place.location;
                 if (place.content)
                     this.place.content= place.content;
                 else
@@ -322,8 +315,7 @@
                 this.place.type= place.type;
                 this.place.tags= place.tags;
                 this.place.address= place.address;
-                this.place.lat= place.lat;
-                this.place.lng= place.lng;
+                this.place.location= place.location;
                 $('#placeDescriptionModal').modal('show')
             },
             getPlaceList() {

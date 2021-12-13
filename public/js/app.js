@@ -3620,10 +3620,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -3645,8 +3641,7 @@ __webpack_require__.r(__webpack_exports__);
         type: 'جاذبه طبیعت',
         tags: '',
         address: '',
-        lat: '',
-        lng: '',
+        location: '',
         content: ''
       },
       contentTitle: ''
@@ -3707,8 +3702,7 @@ __webpack_require__.r(__webpack_exports__);
       this.place.type = 'جاذبه طبیعت';
       this.place.tags = '';
       this.place.address = '';
-      this.place.lat = '';
-      this.place.lng = '';
+      this.place.location = '';
       this.place.content = '';
       this.modalTitle = 'افزودن مکان جدید';
       $('#placeModal').modal('show');
@@ -3721,8 +3715,7 @@ __webpack_require__.r(__webpack_exports__);
       this.place.type = place.type;
       this.place.tags = place.tags;
       this.place.address = place.address;
-      this.place.lat = place.lat;
-      this.place.lng = place.lng;
+      this.place.location = place.location;
       if (place.content) this.place.content = place.content;else this.place.content = '';
       this.modalTitle = 'ویرایش مکان';
       $('#placeModal').modal('show');
@@ -3736,8 +3729,7 @@ __webpack_require__.r(__webpack_exports__);
       this.place.type = place.type;
       this.place.tags = place.tags;
       this.place.address = place.address;
-      this.place.lat = place.lat;
-      this.place.lng = place.lng;
+      this.place.location = place.location;
       $('#placeDescriptionModal').modal('show');
     },
     getPlaceList: function getPlaceList() {
@@ -67973,57 +67965,29 @@ var render = function () {
                     }),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6 mb-3" }, [
+                  _c("div", { staticClass: "col-md-12 mb-3" }, [
                     _c("label", { staticClass: "mb-0" }, [
-                      _vm._v("طول جغرافیایی"),
+                      _vm._v("کد موقعیت گوگل"),
                     ]),
                     _vm._v(" "),
-                    _c("input", {
+                    _c("textarea", {
                       directives: [
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.place.lat,
-                          expression: "place.lat",
+                          value: _vm.place.location,
+                          expression: "place.location",
                         },
                       ],
                       staticClass: "form-control",
-                      attrs: { type: "text" },
-                      domProps: { value: _vm.place.lat },
+                      attrs: { rows: "5" },
+                      domProps: { value: _vm.place.location },
                       on: {
                         input: function ($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.$set(_vm.place, "lat", $event.target.value)
-                        },
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6 mb-3" }, [
-                    _c("label", { staticClass: "mb-0" }, [
-                      _vm._v("عرض جغرافیایی"),
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.place.lng,
-                          expression: "place.lng",
-                        },
-                      ],
-                      staticClass: "form-control",
-                      attrs: { type: "text" },
-                      domProps: { value: _vm.place.lng },
-                      on: {
-                        input: function ($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.place, "lng", $event.target.value)
+                          _vm.$set(_vm.place, "location", $event.target.value)
                         },
                       },
                     }),
