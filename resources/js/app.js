@@ -17,6 +17,12 @@ Vue.component('v-select', vSelect)
 Vue.component('admin-index', require('./admin/index.vue').default);
 
 
+Vue.component('gallery', require('./components/gallery').default);
+Vue.component('place-like', require('./components/placeLike').default);
+Vue.component('comment', require('./components/comment').default);
+Vue.component('search', require('./components/search').default);
+
+
 
 
 const app = new Vue({
@@ -24,5 +30,6 @@ const app = new Vue({
 });
 
 Vue.filter('date', (date, format) => {
+    moment.loadPersian({dialect: 'persian-modern'})
     return moment(date).format(format)
 });

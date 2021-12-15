@@ -29,6 +29,7 @@
         "@tinymce/tinymce-vue": "^3.2.8",
         "moment-jalaali": "^0.9.4",
         "sweetalert2": "^11.3.0",
+        "vue-gallery-slideshow": "^1.5.2",
         "vue-select": "^3.16.0"
     }
 }

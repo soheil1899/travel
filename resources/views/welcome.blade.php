@@ -27,8 +27,8 @@
                     </div>
                     <div class="text-left font13 mt-2">
                         <label class="text-secondary mr-4 mb-0">
-                            {{$p['comments']}}
-                            <i class="fas fa-comment"></i>
+                            {{$p['like']}}
+                            <i class="fas fa-heart"></i>
                         </label>
                         <label class="text-secondary mr-4 mb-0">
                             {{$p['seen']}}
@@ -57,7 +57,7 @@
                 <h5>آخرین ویدیوها</h5>
             </div>
             <div class="col-6">
-                <a href="#" class="text-primary">نمایش بیشتر
+                <a href="/videos" class="text-primary">نمایش بیشتر
                     <i class="fas fa-chevron-circle-left"></i>
                 </a>
             </div>

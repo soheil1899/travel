@@ -20,6 +20,19 @@ Route::namespace('App\Http\Controllers\Client')->group(function () {
 
     Route::get('/place/{id}/{title}', 'IndexController@place');
 
+    Route::get('/videos', 'IndexController@videos');
+    Route::get('/video/{id}/{title}', 'IndexController@video');
+
+
+    Route::get('/place-gallery/{id}', 'PlaceController@placeGallery');
+    Route::get('/place-like/{id}', 'PlaceController@placeLike');
+    Route::get('/get-comment/{id}', 'PlaceController@getComment');
+    Route::get('/comment-like/{id}', 'PlaceController@commentLike');
+    Route::post('/save-comment', 'PlaceController@saveComment');
+
+
+    Route::get('/search', 'IndexController@search');
+    Route::post('/searching', 'IndexController@searching');
 });
 
 Auth::routes();

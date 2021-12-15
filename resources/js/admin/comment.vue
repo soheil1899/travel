@@ -28,7 +28,8 @@
             <tr v-for="c in list" :class="c.publish?'table-success':''">
                 <th class="text-center" scope="row">{{c.id}}</th>
                 <td class="text-center">{{c.place.title}}</td>
-                <td class="text-center">{{c.user.name}}</td>
+                <td class="text-center" v-if="c.user">{{c.user.name}}</td>
+                <td class="text-center" v-else>کاربر میهمان</td>
                 <td class="text-center">{{c.ip_address}}</td>
                 <td class="text-center">{{c.comment}}</td>
                 <td class="text-center">{{c.like}}</td>
