@@ -19,7 +19,7 @@
     <div class="row mx-0 my-3 px-5">
         <div class="col-6 pr-0 text-right">
             <a href="/">
-            <img src="/images/logo.png" alt="">
+                <img src="/logo.png" style="max-width: 140px; max-height: 37px" alt="">
             </a>
         </div>
         <div class="col-6 pl-0">
@@ -68,18 +68,21 @@
                     </div>
                     <div class="p-1">
                         <ul class="list-unstyled px-1 mb-0">
-                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" href="">
+                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" target="_blank" href="https://respina24.ir/tour/تور-مشهد">
                                     <img class="ml-2" src="/images/تور-مشهد.jpg" alt="">
                                     تور مشهد</a></li>
-                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" href="">
+                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" target="_blank" href="https://respina24.ir/tour/تور-کیش">
                                     <img class="ml-2" src="/images/تور-کیش.jpg" alt="">
                                     تور کیش</a></li>
-                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" href="">
+                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" target="_blank" href="https://respina24.ir/bus">
                                     <img class="ml-2" src="/images/اتوبوس.jpg" alt="">
                                     بلیط اتوبوس</a></li>
-                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" href="">
+                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" target="_blank" href="https://respina24.ir/flight/search/MHD/KIH/بلیط-هواپیما-مشهد-کیش">
                                     <img class="ml-2" src="/images/پرواز.jpg" alt="">
                                     بلیط هواپیما مشهد کیش</a></li>
+                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" target="_blank" href="https://respina24.ir/flight/search/THR/KIH/بلیط-هواپیما-تهران-کیش">
+                                    <img class="ml-2" src="/images/پرواز.jpg" alt="">
+                                    بلیط هواپیما تهران کیش</a></li>
                         </ul>
                     </div>
                 </div>
@@ -91,13 +94,13 @@
                     </div>
                     <div class="p-1">
                         <ul class="list-unstyled px-1 mb-0">
-                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" href="">
+                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" target="_blank" href="https://www.mehrparvaz.com/tour/turkey">
                                     <img class="ml-2" src="/images/ترکیه.png" alt="">
                                     تور ترکیه</a></li>
-                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" href="">
+                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" target="_blank" href="https://www.trip.ir/flight/mashhad">
                                     <img class="ml-2" src="/images/مشهد-پرواز.png" alt="">
                                     بیلط هواپیما مشهد</a></li>
-                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" href="">
+                            <li><a class="left-list-item rounded w-100 px-2 py-1 d-block mb-2 border" target="_blank" href="https://www.alefbatour.com/tour/antalya">
                                     <img class="ml-2" src="/images/آنتالیا.png" alt="">
                                     تور آنتالیا</a></li>
                         </ul>
@@ -113,19 +116,16 @@
                     <div class="p-1">
                         <ul class="list-unstyled px-1 mb-0">
                             <li><a class="left-list-item2 bg-blue01 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
+                                   target="_blank" href="https://www.vilajar.com/RentVilla/City/کردان">
                                     اجاره ویلا در کردان</a></li>
                             <li><a class="left-list-item2 bg-blue02 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
+                                   target="_blank" href="https://www.uspace.ir">
                                     اقامتگاه بوم گردی</a></li>
-                            <li><a class="left-list-item2 bg-blue01 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
-                                    اجاره ویلا</a></li>
                             <li><a class="left-list-item2 bg-blue02 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
+                                   target="_blank" href="https://tehranmoble.ir">
                                     اجاره آپارتمان مبله</a></li>
                             <li><a class="left-list-item2 bg-blue01 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
+                                   target="_blank" href="https://www.jajiga.com">
                                     اجاره ویلا شمال</a></li>
                         </ul>
                     </div>
@@ -139,25 +139,22 @@
                     <div class="p-1">
                         <ul class="list-unstyled px-1 mb-0">
                             <li><a class="left-list-item2 bg-blue01 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
+                                   target="_blank" href="https://respina24.ir/tour/تور-قشم">
                                     تور قشم</a></li>
                             <li><a class="left-list-item2 bg-blue02 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
-                                    تور اروپا</a></li>
+                                   target="_blank" href="https://www.eligasht.com">
+                                    الی گشت</a></li>
                             <li><a class="left-list-item2 bg-blue01 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
-                                    تور استانبول لحظه آخری</a></li>
-                            <li><a class="left-list-item2 bg-blue02 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
-                                    بلیط هواپیما ارزان</a></li>
+                                   target="_blank" href="https://tikban.com/بلیط-اتوبوس">
+                                    بلیط اتوبوس</a></li>
                             <li><a class="left-list-item2 bg-blue01 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
+                                   target="_blank" href="https://mrbilit.com/bus-ticket">
                                     بلیط اتوبوس</a></li>
                             <li><a class="left-list-item2 bg-blue02 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
+                                   target="_blank" href="https://tikban.com/بلیط-قطار">
                                     بلیط قطار</a></li>
                             <li><a class="left-list-item2 bg-blue01 text-center w-100 px-2 py-2 d-block rounded mb-2"
-                                   href="">
+                                   target="_blank" href="https://flightio.com/page/charter-ticket">
                                     بلیط چارتر</a></li>
                         </ul>
                     </div>
@@ -188,22 +185,16 @@
         </div>
     </div>
 
+
     <div class="row p-5 mx-0">
-        <div class="col-6 pr-0">
+        <div class="col-8 pr-0 pl-lg-5">
             <h3 class="font16 text-right">درباره همگردی</h3>
             <div class="mb-3" style="width: 60px; height: 2px; background-color: #f8902f"></div>
             <p class="text-right font13">
-                شرکت سامانه سفیران مهر همگردی با سایت همگردی؛ به عنوان اولین سایت گردشگری ایران با قابلیت های مشارکت
-                کاربران خود، دارای اطلاعات جامع و کاملی در خصوص ایرانگردی و جهانگردی است. همگردی شامل اطلاعات جامعی در
-                خصوص جاذبه های گردشگری ایران و جهان، راهنمای حرفه ای ایرانگردی و جهانگردی و اخبار و مقالات کاربردی حوزه
-                گردشگری است. همگردی به شما این امکان را می دهد تا اوقات فراغت خود را برای یک برنامه گردشگری درون شهری یا
-                برون شهری به خوبی برنامه ریزی کنید، برای سفر خود بلیط هواپیما، قطار یا اتوبوس تهیه کنید، هتل رزرو کنید و
-                یک راهنمای سفر کاربردی داشته باشید. اطلاعات همگردی توسط گردشگران و مخاطبان سایت تهیه می شود و شما نیز
-                این امکان را دارید تا به عنوان یک گردشگر حرفه ای یا غیر حرفه ای تجربیات، رویدادها و مکان های دیدنی شهر و
-                مقاصد سفرتان را به دیگر گردشگران معرفی کنید و به گسترش فرهنگ گردشگری کمک کنید.
+                {!! $setting['about'] !!}
             </p>
         </div>
-        <div class="col-3">
+        <div class="col-2">
             <h3 class="font16 text-right">لینک های همگردی</h3>
             <div class="mb-3" style="width: 60px; height: 2px; background-color: #f8902f"></div>
             <div class="row text-right">
@@ -212,32 +203,36 @@
                         <li><a href="">قوانین</a></li>
                         <li><a href="">درباره ما</a></li>
                         <li><a href="">کسب و کار</a></li>
-                        <li><a href="">فرصت های شغلی</a></li>
                         <li><a href="">تماس با ما</a></li>
-                        <li><a href="">همکاری با ما</a></li>
-                    </ul>
-                </div>
-                <div class="col-6">
-                    <ul class="pr-0" style="list-style: none">
-                        <li><a href="">قوانین</a></li>
-                        <li><a href="">درباره ما</a></li>
-                        <li><a href="">کسب و کار</a></li>
-                        <li><a href="">فرصت های شغلی</a></li>
-                        <li><a href="">تماس با ما</a></li>
-                        <li><a href="">همکاری با ما</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="col-3 pl-0">
+        <div class="col-2 pl-0">
             <h3 class="font16 text-right">همگردی را دنبال کنید</h3>
             <div class="mb-3" style="width: 60px; height: 2px; background-color: #f8902f"></div>
-            <a href="" class="social-a" style="background-color: #5076ff; padding-left: 6px">
-                <i class="fab fa-telegram item-social"></i>
+            <div class="text-right">
+            <a href="{{$setting['telegram']}}" class="social-a" style="background-color: #50b9ff; padding-left: 6px">
+                <i class="fab fa-telegram-plane item-social"></i>
             </a>
-            <a href="" class="social-a" style="background-color: #ff50ac;">
+            <a href="{{$setting['instagram']}}" class="social-a" style="background-color: #d950ff;">
                 <i class="fab fa-instagram item-social"></i>
             </a>
+            <a href="{{$setting['linkedin']}}" class="social-a" style="background-color: #509fff;">
+                <i class="fab fa-linkedin-in item-social"></i>
+            </a>
+            <a href="{{$setting['aparat']}}" class="social-a" style="background-color: #ffc3dd;">
+                <img src="/images/aparat.png" width="24px" style="margin-top: -8px" alt="">
+            </a>
+            </div>
+            <div class="text-right font13 text-secondary mt-4">
+                <strong>شماره تماس:</strong>
+                <strong class="d-inline-block" style="direction: ltr">{{$setting['tell']}}</strong>
+            </div>
+            <div class="text-right font13 text-secondary mt-1">
+                <strong>آدرس:</strong>
+                <strong class="d-inline-block" style="direction: ltr">{{$setting['address']}}</strong>
+            </div>
         </div>
     </div>
 

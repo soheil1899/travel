@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Movie;
 use App\Models\Place;
 use App\Models\Seen;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -14,11 +15,12 @@ class IndexController extends Controller
     public function index()
     {
         $menu = Category::get(['id', 'title']);
+        $setting = Setting::first();
         $place = Place::with('category')->orderBy('id', 'desc')->limit(12)->get();
         $video = Movie::orderBy('id', 'desc')->limit(4)->get();
         $random = Place::with('category')->inRandomOrder()->limit(3)->get();
 
-        return view('welcome', compact('menu', 'place', 'video', 'random'));
+        return view('welcome', compact('menu', 'place', 'video', 'random', 'setting'));
     }
 
     public function category($id, $title)
