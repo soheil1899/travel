@@ -10,7 +10,7 @@
                 <button class="btn btn-sm btn-success px-4" @click="addPlace">افزودن مکان جدید</button>
             </div>
         </div>
-        <table class="table table-striped">
+        <table class="table table-striped table-responsive-md">
             <thead class="thead-dark">
             <tr>
                 <th class="text-center" scope="col">#</th>
@@ -80,7 +80,7 @@
                             <div class="col-md-6 mb-3">
                                 <label class="mb-0">دسته بندی <span class="text-danger">*</span></label>
                                 <select class="form-control" v-model="place.category_id">
-                                    <option v-for="c in categoryList" :value="c.id">{{c.title}}</option>
+                                    <option v-for="c in categoryList" :key="c.id" :value="c.id">{{c.title}}</option>
                                 </select>
                             </div>
                             <div class="col-md-6 mb-3">
@@ -144,7 +144,7 @@
                                 <editor v-model="place.content"
                                         api-key="3wu93q3r5cqr4wjv1f2bfqnb9ipogb37lvl7chpsuyubd4kk"
                                         :init="{
-         height: 500,
+         height: 400,
          menubar: false,
          plugins: [
            'advlist autolink lists link image charmap print preview anchor',

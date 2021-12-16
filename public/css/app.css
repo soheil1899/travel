@@ -14693,7 +14693,7 @@ html, body, h1, h2, h3, h4, h5, h6, p {
 
 @media (min-width: 1200px) and (max-width: 1500px) {
   .container {
-    max-width: 1180px !important;
+    max-width: 1270px !important;
   }
 }
 @media (min-width: 1500px) {

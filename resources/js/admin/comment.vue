@@ -9,7 +9,7 @@
             <div class="col-lg-6 text-left">
             </div>
         </div>
-        <table class="table table-striped">
+        <table class="table table-striped table-responsive-md">
             <thead class="thead-dark">
             <tr>
                 <th class="text-center" scope="col">#</th>

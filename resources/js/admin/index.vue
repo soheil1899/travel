@@ -1,16 +1,16 @@
 <template>
     <div style="direction: rtl">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
+            <li class="nav-item" @click="getCount">
                 <a class="nav-link px-lg-4 active" id="home-tab" data-toggle="tab" href="#home">داشبورد</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-lg-4" id="user-tab" data-toggle="tab" href="#user">مدیریت کاربران</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" @click="getCategory">
                 <a class="nav-link px-lg-4" id="category-tab" data-toggle="tab" href="#category" role="tab">مدیریت دسته بندی ها</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" @click="getCategory">
                 <a class="nav-link px-lg-4" id="place-tab" data-toggle="tab" href="#place" role="tab">مدیریت مکان ها</a>
             </li>
             <li class="nav-item">
@@ -24,7 +24,98 @@
             </li>
         </ul>
         <div class="tab-content text-right px-4 py-5" id="myTabContent">
-            <div class="tab-pane fade show active" id="home">...</div>
+            <div class="tab-pane fade show active" id="home">
+                <div class="row justify-content-center mx-0">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد کل کاربران سایت</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['users']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد کل دسته بندی ها</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['category']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد کل مکان ها</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['place']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد کل ویدیوها</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['video']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد کل کامنت ها</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['comment_0'] + counts['comment_1']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد نظرات تایید نشده</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['comment_0']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد نظرات تایید شده</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['comment_1']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد کل بازدیدها</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['seen']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد کل پسندها</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['like_p'] + counts['like_c']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد پسندهای مکان</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['like_p']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="border bg-white p-3 rounded" style="box-shadow: 0 0 10px 0 #ccc">
+                            <h5>تعداد پسندهای نظرات</h5>
+                            <h4 class="text-left">
+                            <strong>{{counts['like_c']}}</strong>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="tab-pane fade" id="user">
                 <user-tab></user-tab>
             </div>
@@ -60,12 +151,24 @@
         data(){
             return{
                 categoryList:[],
+                counts: [],
             }
         },
         mounted() {
-            axios.get('/admin/category-list').then(res => {
-                this.categoryList = res.data;
-            });
+            this.getCategory();
+            this.getCount();
+        },
+        methods:{
+            getCategory(){
+                axios.get('/admin/category-list').then(res => {
+                    this.categoryList = res.data;
+                });
+            },
+            getCount(){
+                axios.get('/admin/get-count').then(res => {
+                    this.counts = res.data;
+                });
+            }
         }
     }
 </script>

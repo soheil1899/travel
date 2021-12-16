@@ -10,7 +10,7 @@
                 <button class="btn btn-sm btn-success px-4" @click="addCategory">افزودن دسته جدید</button>
             </div>
         </div>
-        <table class="table table-striped">
+        <table class="table table-striped table-responsive-md">
             <thead class="thead-dark">
             <tr>
                 <th class="text-center" scope="col">#</th>
@@ -84,7 +84,7 @@
                                 <editor v-model="category.content"
                                         api-key="3wu93q3r5cqr4wjv1f2bfqnb9ipogb37lvl7chpsuyubd4kk"
                                         :init="{
-         height: 500,
+         height: 400,
          menubar: false,
          plugins: [
            'advlist autolink lists link image charmap print preview anchor',
@@ -176,7 +176,7 @@
             },
             getCategoryList() {
                 axios.get('/admin/category-list').then(res => {
-                    this.list = res.data;
+                    this.categoryList = res.data;
                 });
             },
 

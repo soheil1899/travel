@@ -26,38 +26,43 @@ class IndexController extends Controller
     public function category($id, $title)
     {
         $menu = Category::get(['id', 'title']);
+        $setting = Setting::first();
         $category = Category::find($id);
         $place = Place::where('category_id', $id)->with('category')->orderBy('id', 'desc')->limit(8)->get();
 
-        return view('category', compact('menu', 'category', 'place'));
+        return view('category', compact('menu', 'category', 'place', 'setting'));
     }
 
     public function videos()
     {
         $menu = Category::get(['id', 'title']);
+        $setting = Setting::first();
         $videos = Movie::all();
 
-        return view('videos', compact('menu', 'videos'));
+        return view('videos', compact('menu', 'videos', 'setting'));
     }
 
     public function video($id, $title)
     {
         $menu = Category::get(['id', 'title']);
+        $setting = Setting::first();
         $video = Movie::where('id', $id)->first();
 
-        return view('video', compact('menu', 'video'));
+        return view('video', compact('menu', 'video', 'setting'));
     }
 
     public function search()
     {
         $menu = Category::get(['id', 'title']);
+        $setting = Setting::first();
 
-        return view('search', compact('menu'));
+        return view('search', compact('menu', 'setting'));
     }
 
     public function place($id, $title, Request $request)
     {
         $menu = Category::get(['id', 'title']);
+        $setting = Setting::first();
         $place = Place::where('id', $id)->with('category')->first();
         $seen = Seen::where([['place_id', $id], ['ip_address', $request->ip()]])->first();
         if (!$seen){
@@ -69,7 +74,7 @@ class IndexController extends Controller
             $place->save();
         }
 
-        return view('place', compact('menu', 'place'));
+        return view('place', compact('menu', 'place', 'setting'));
     }
 
     public function searching(Request $request)

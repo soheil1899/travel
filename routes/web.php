@@ -43,6 +43,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->middleware(['auth', 'CheckAdmin'])->group(function () {
     Route::get('/', 'AdminController@index')->name('master');
     Route::get('/get-setting', 'AdminController@getSetting');
+    Route::get('/get-count', 'AdminController@getCount');
     Route::post('/change-setting', 'AdminController@changeSetting');
 
 

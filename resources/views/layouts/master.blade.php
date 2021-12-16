@@ -16,13 +16,13 @@
 
 <div id="app">
 <div class="container">
-    <div class="row mx-0 my-3 px-5">
-        <div class="col-6 pr-0 text-right">
+    <div class="row mx-0 my-3 px-lg-5">
+        <div class="col-lg-6 pr-lg-0 text-lg-right text-center mb-lg-0 mb-3">
             <a href="/">
                 <img src="/logo.png" style="max-width: 140px; max-height: 37px" alt="">
             </a>
         </div>
-        <div class="col-6 pl-0">
+        <div class="col-lg-6 pl-lg-0 text-lg-left text-center">
             @guest()
             <a href="/login" class="btn btn-primary text-white blue-shadow px-4">عضویت/ورود</a>
             @else
@@ -54,12 +54,12 @@
     </div>
 
 
-    <div class="my-4 px-4">
+    <div class="my-4 px-lg-4">
         <div class="row mx-0 text-right">
-            <div class="col-9 pr-0">
+            <div class="col-lg-9 pr-lg-0">
                 @yield('content')
             </div>
-            <div class="col-3 pl-0">
+            <div class="col-lg-3 pl-lg-0">
                 <div class="bg-white mb-3 left-list rounded overflow-hidden">
                     <div class="bg-primary position-relative p-2">
                         <div class="position-absolute bg-warning py-2 px-3" style="top: 0; right: 0; height: 100%"><i
@@ -165,36 +165,37 @@
 
     @yield('additional')
 
-    <div class="row mx-0 py-4 px-5" style="background-color: #f8902f">
-        <div class="col-3 text-white pr-0 text-right">
-            <h2 style="font-size: 20px; font-weight: bold">اشتراک در خبرنامه همگردی</h2>
-        </div>
-        <div class="col-6 text-white text-center">
-            با عضویت در خبرنامه همگردی از تخفیف های ویژه، جشنواره های خرید، رویدادهای مهم دنیای سفر و گردشگری باخبر
-            شوید.
-        </div>
-        <div class="col-3 pl-0">
-            <div class="pr-5 position-relative">
-                <input type="text" class="form-control text-left"
-                       style="border-radius: 20px; padding: 0 35px; direction: ltr">
-                <button class="btn btn-warning2 btn-sm position-absolute"
-                        style="top: 5px;right: 0;border-radius: 15px;padding: 4px 20px;">اشتراک
-                </button>
-                <i class="fas fa-envelope position-absolute fa-lg" style="top: 10px;left: 10px;color: #f8902f;"></i>
+    <div class="d-none d-lg-block">
+        <div class="row mx-0 py-4 px-5" style="background-color: #f8902f">
+            <div class="col-3 text-white pr-0 text-right">
+                <h2 style="font-size: 20px; font-weight: bold">اشتراک در خبرنامه همگردی</h2>
+            </div>
+            <div class="col-6 text-white text-center">
+                با عضویت در خبرنامه همگردی از تخفیف های ویژه، جشنواره های خرید، رویدادهای مهم دنیای سفر و گردشگری باخبر
+                شوید.
+            </div>
+            <div class="col-3 pl-0">
+                <div class="pr-5 position-relative">
+                    <input type="text" class="form-control text-left"
+                           style="border-radius: 20px; padding: 0 35px; direction: ltr">
+                    <button class="btn btn-warning2 btn-sm position-absolute"
+                            style="top: 5px;right: 0;border-radius: 15px;padding: 4px 20px;">اشتراک
+                    </button>
+                    <i class="fas fa-envelope position-absolute fa-lg" style="top: 10px;left: 10px;color: #f8902f;"></i>
+                </div>
             </div>
         </div>
     </div>
 
-
     <div class="row p-5 mx-0">
-        <div class="col-8 pr-0 pl-lg-5">
+        <div class="col-lg-7 pr-0 pl-lg-5">
             <h3 class="font16 text-right">درباره همگردی</h3>
             <div class="mb-3" style="width: 60px; height: 2px; background-color: #f8902f"></div>
             <p class="text-right font13">
                 {!! $setting['about'] !!}
             </p>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2">
             <h3 class="font16 text-right">لینک های همگردی</h3>
             <div class="mb-3" style="width: 60px; height: 2px; background-color: #f8902f"></div>
             <div class="row text-right">
@@ -208,7 +209,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-2 pl-0">
+        <div class="col-lg-3 pl-0">
             <h3 class="font16 text-right">همگردی را دنبال کنید</h3>
             <div class="mb-3" style="width: 60px; height: 2px; background-color: #f8902f"></div>
             <div class="text-right">

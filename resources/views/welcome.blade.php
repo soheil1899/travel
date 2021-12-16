@@ -4,7 +4,7 @@
 @section('content')
     <div class="row mx-0">
         @foreach($place as $p)
-        <div class="col-4 mb-4">
+        <div class="col-lg-4 mb-4">
             <div class="p-2" style="box-shadow: 0 0 10px 0 #ccc;">
                 <a href="/place/{{$p['id']}}/{{$p['title']}}">
                     <div class="index-img" style="background-image: url(/place/{{$p['id']}}/{{$p['image']}})"></div>
@@ -81,9 +81,9 @@
         <div>
             <h5 style="border-bottom: 3px solid #56a0d9" class="widthfit pb-2 mx-auto px-3">پیشنهادهای لحظه ای همگردی</h5>
         </div>
-        <div class="row mx-5 mt-4 px-5">
+        <div class="row mx-lg-5 mt-4 px-lg-5">
             @foreach($random as $r)
-            <div class="col-4">
+            <div class="col-lg-4 mb-lg-0 mb-5">
                 <a href="/place/{{$r['id']}}/{{$r['title']}}">
                 <div class="index-img pointer position-relative" style="background-image: url(/place/{{$r['id']}}/{{$r['image']}})">
                     <div class="position-absolute bg-white mx-auto p-3 font12 text-center" style="border-radius: 10px;box-shadow: 0 0 10px 0 #bfbfbf;left: 0; right: 0; top: 120px; width: 90%">

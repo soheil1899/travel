@@ -2672,7 +2672,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get('/admin/category-list').then(function (res) {
-        _this.list = res.data;
+        _this.categoryList = res.data;
       });
     },
     saveCategory: function saveCategory() {
@@ -3039,6 +3039,97 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3057,15 +3148,29 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      categoryList: []
+      categoryList: [],
+      counts: []
     };
   },
   mounted: function mounted() {
-    var _this = this;
+    this.getCategory();
+    this.getCount();
+  },
+  methods: {
+    getCategory: function getCategory() {
+      var _this = this;
 
-    axios.get('/admin/category-list').then(function (res) {
-      _this.categoryList = res.data;
-    });
+      axios.get('/admin/category-list').then(function (res) {
+        _this.categoryList = res.data;
+      });
+    },
+    getCount: function getCount() {
+      var _this2 = this;
+
+      axios.get('/admin/get-count').then(function (res) {
+        _this2.counts = res.data;
+      });
+    }
   }
 });
 
@@ -67064,7 +67169,7 @@ var render = function () {
       ]),
     ]),
     _vm._v(" "),
-    _c("table", { staticClass: "table table-striped" }, [
+    _c("table", { staticClass: "table table-striped table-responsive-md" }, [
       _vm._m(1),
       _vm._v(" "),
       _c(
@@ -67244,7 +67349,7 @@ var render = function () {
                           "api-key":
                             "3wu93q3r5cqr4wjv1f2bfqnb9ipogb37lvl7chpsuyubd4kk",
                           init: {
-                            height: 500,
+                            height: 400,
                             menubar: false,
                             plugins: [
                               "advlist autolink lists link image charmap print preview anchor",
@@ -67397,7 +67502,7 @@ var render = function () {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("table", { staticClass: "table table-striped" }, [
+    _c("table", { staticClass: "table table-striped table-responsive-md" }, [
       _vm._m(1),
       _vm._v(" "),
       _c(
@@ -67760,7 +67865,62 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticStyle: { direction: "rtl" } }, [
-    _vm._m(0),
+    _c(
+      "ul",
+      { staticClass: "nav nav-tabs", attrs: { id: "myTab", role: "tablist" } },
+      [
+        _c("li", { staticClass: "nav-item", on: { click: _vm.getCount } }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link px-lg-4 active",
+              attrs: { id: "home-tab", "data-toggle": "tab", href: "#home" },
+            },
+            [_vm._v("داشبورد")]
+          ),
+        ]),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item", on: { click: _vm.getCategory } }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link px-lg-4",
+              attrs: {
+                id: "category-tab",
+                "data-toggle": "tab",
+                href: "#category",
+                role: "tab",
+              },
+            },
+            [_vm._v("مدیریت دسته بندی ها")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item", on: { click: _vm.getCategory } }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link px-lg-4",
+              attrs: {
+                id: "place-tab",
+                "data-toggle": "tab",
+                href: "#place",
+                role: "tab",
+              },
+            },
+            [_vm._v("مدیریت مکان ها")]
+          ),
+        ]),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
+        _vm._m(3),
+      ]
+    ),
     _vm._v(" "),
     _c(
       "div",
@@ -67772,7 +67932,206 @@ var render = function () {
         _c(
           "div",
           { staticClass: "tab-pane fade show active", attrs: { id: "home" } },
-          [_vm._v("...")]
+          [
+            _c("div", { staticClass: "row justify-content-center mx-0" }, [
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد کل کاربران سایت")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [_vm._v(_vm._s(_vm.counts["users"]))]),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد کل دسته بندی ها")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [_vm._v(_vm._s(_vm.counts["category"]))]),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد کل مکان ها")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [_vm._v(_vm._s(_vm.counts["place"]))]),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد کل ویدیوها")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [_vm._v(_vm._s(_vm.counts["video"]))]),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد کل کامنت ها")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [
+                        _vm._v(
+                          _vm._s(
+                            _vm.counts["comment_0"] + _vm.counts["comment_1"]
+                          )
+                        ),
+                      ]),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد نظرات تایید نشده")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [_vm._v(_vm._s(_vm.counts["comment_0"]))]),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد نظرات تایید شده")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [_vm._v(_vm._s(_vm.counts["comment_1"]))]),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد کل بازدیدها")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [_vm._v(_vm._s(_vm.counts["seen"]))]),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد کل پسندها")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [
+                        _vm._v(
+                          _vm._s(_vm.counts["like_p"] + _vm.counts["like_c"])
+                        ),
+                      ]),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد پسندهای مکان")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [_vm._v(_vm._s(_vm.counts["like_p"]))]),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-3 col-md-6 mb-4" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border bg-white p-3 rounded",
+                    staticStyle: { "box-shadow": "0 0 10px 0 #ccc" },
+                  },
+                  [
+                    _c("h5", [_vm._v("تعداد پسندهای نظرات")]),
+                    _vm._v(" "),
+                    _c("h4", { staticClass: "text-left" }, [
+                      _c("strong", [_vm._v(_vm._s(_vm.counts["like_c"]))]),
+                    ]),
+                  ]
+                ),
+              ]),
+            ]),
+          ]
         ),
         _vm._v(" "),
         _c(
@@ -67825,113 +68184,76 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "ul",
-      { staticClass: "nav nav-tabs", attrs: { id: "myTab", role: "tablist" } },
-      [
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link px-lg-4 active",
-              attrs: { id: "home-tab", "data-toggle": "tab", href: "#home" },
-            },
-            [_vm._v("داشبورد")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link px-lg-4",
-              attrs: { id: "user-tab", "data-toggle": "tab", href: "#user" },
-            },
-            [_vm._v("مدیریت کاربران")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link px-lg-4",
-              attrs: {
-                id: "category-tab",
-                "data-toggle": "tab",
-                href: "#category",
-                role: "tab",
-              },
-            },
-            [_vm._v("مدیریت دسته بندی ها")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link px-lg-4",
-              attrs: {
-                id: "place-tab",
-                "data-toggle": "tab",
-                href: "#place",
-                role: "tab",
-              },
-            },
-            [_vm._v("مدیریت مکان ها")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link px-lg-4",
-              attrs: {
-                id: "video-tab",
-                "data-toggle": "tab",
-                href: "#video",
-                role: "tab",
-              },
-            },
-            [_vm._v("مدیریت ویدیوها")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link px-lg-4",
-              attrs: {
-                id: "comment-tab",
-                "data-toggle": "tab",
-                href: "#comment",
-                role: "tab",
-              },
-            },
-            [_vm._v("مدیریت کامنت ها")]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link px-lg-4",
-              attrs: {
-                id: "setting-tab",
-                "data-toggle": "tab",
-                href: "#setting",
-                role: "tab",
-              },
-            },
-            [_vm._v("تنظیمات سایت")]
-          ),
-        ]),
-      ]
-    )
+    return _c("li", { staticClass: "nav-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link px-lg-4",
+          attrs: { id: "user-tab", "data-toggle": "tab", href: "#user" },
+        },
+        [_vm._v("مدیریت کاربران")]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link px-lg-4",
+          attrs: {
+            id: "video-tab",
+            "data-toggle": "tab",
+            href: "#video",
+            role: "tab",
+          },
+        },
+        [_vm._v("مدیریت ویدیوها")]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link px-lg-4",
+          attrs: {
+            id: "comment-tab",
+            "data-toggle": "tab",
+            href: "#comment",
+            role: "tab",
+          },
+        },
+        [_vm._v("مدیریت کامنت ها")]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link px-lg-4",
+          attrs: {
+            id: "setting-tab",
+            "data-toggle": "tab",
+            href: "#setting",
+            role: "tab",
+          },
+        },
+        [_vm._v("تنظیمات سایت")]
+      ),
+    ])
   },
 ]
 render._withStripped = true
@@ -67978,7 +68300,7 @@ var render = function () {
           { staticClass: "row" },
           [
             _vm._l(_vm.list, function (m) {
-              return _c("div", { staticClass: "col-lg-4" }, [
+              return _c("div", { staticClass: "col-lg-4 mb-5" }, [
                 _c("div", { attrs: { id: m.id } }, [
                   _c("script", {
                     attrs: {
@@ -68564,7 +68886,7 @@ var render = function () {
       ]),
     ]),
     _vm._v(" "),
-    _c("table", { staticClass: "table table-striped" }, [
+    _c("table", { staticClass: "table table-striped table-responsive-md" }, [
       _vm._m(1),
       _vm._v(" "),
       _c(
@@ -68843,9 +69165,11 @@ var render = function () {
                         },
                       },
                       _vm._l(_vm.categoryList, function (c) {
-                        return _c("option", { domProps: { value: c.id } }, [
-                          _vm._v(_vm._s(c.title)),
-                        ])
+                        return _c(
+                          "option",
+                          { key: c.id, domProps: { value: c.id } },
+                          [_vm._v(_vm._s(c.title))]
+                        )
                       }),
                       0
                     ),
@@ -69097,7 +69421,7 @@ var render = function () {
                           "api-key":
                             "3wu93q3r5cqr4wjv1f2bfqnb9ipogb37lvl7chpsuyubd4kk",
                           init: {
-                            height: 500,
+                            height: 400,
                             menubar: false,
                             plugins: [
                               "advlist autolink lists link image charmap print preview anchor",
@@ -69804,7 +70128,7 @@ var render = function () {
       ]),
     ]),
     _vm._v(" "),
-    _c("table", { staticClass: "table table-striped" }, [
+    _c("table", { staticClass: "table table-striped table-responsive-md" }, [
       _vm._m(1),
       _vm._v(" "),
       _c(
@@ -82954,7 +83278,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_args":[["axios@0.21.4","E:\\\\website\\\\travel"]],"_development":true,"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_spec":"0.21.4","_where":"E:\\\\website\\\\travel","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"D:\\\\web\\\\travel","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 

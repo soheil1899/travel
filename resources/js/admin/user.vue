@@ -10,7 +10,7 @@
                 <button class="btn btn-sm btn-success px-4" @click="addUser">افزودن کاربر جدید</button>
             </div>
         </div>
-        <table class="table table-striped">
+        <table class="table table-striped table-responsive-md">
             <thead class="thead-dark">
             <tr>
                 <th class="text-center" scope="col">#</th>

@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Comment;
+use App\Models\Movie;
+use App\Models\Place;
 use App\Models\Setting;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
 
@@ -12,6 +17,21 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin');
+    }
+
+    public function getCount()
+    {
+        $users = User::count();
+        $category = Category::count();
+        $place = Place::count();
+        $video = Movie::count();
+        $comment_0 = Comment::where('publish', 0)->count();
+        $comment_1 = Comment::where('publish', 1)->count();
+        $seen = Place::sum('seen');
+        $like_p = Place::sum('like');
+        $like_c = Comment::sum('like');
+        return ['users'=>$users, 'category'=>$category, 'place'=>$place, 'video'=>$video, 'comment_0'=>$comment_0,
+            'comment_1'=>$comment_1, 'seen'=>$seen, 'like_p'=>$like_p, 'like_c'=>$like_c];
     }
 
     public function getSetting()

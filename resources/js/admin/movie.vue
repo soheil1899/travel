@@ -13,7 +13,7 @@
 
 
         <div class="row" v-if="list">
-            <div class="col-lg-4" v-for="m in list">
+            <div class="col-lg-4 mb-5" v-for="m in list">
                 <div :id="m.id"><script type="text/JavaScript" :src="'https://www.aparat.com/embed/'+m.aparat_link+'?data[rnddiv]='+m.id+'&data[responsive]=yes'"></script></div>
 
                 <div class="mt-3">

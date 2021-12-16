@@ -17,7 +17,6 @@
     <div class="bg-white mt-3" style="box-shadow: 0 0 5px 0 #dfdfdf;">
         <div class="py-3 px-4" style="box-shadow: 0 0 10px 0 #dfdfdf;">
             <h5 class="d-inline-block">
-                درباره
                 {{$video['title']}}
             </h5>
             <a class="btn float-left btn-light border" target="_blank" href="https://telegram.me/share/url?url=http://{{$_SERVER['HTTP_HOST']}}{{$_SERVER['REQUEST_URI']}}">
